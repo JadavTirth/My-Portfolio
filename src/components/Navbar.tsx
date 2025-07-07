@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun, Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
-import icon  from "../../assets/ps2.jpg"
+import icon  from "../../assets/Logo.jpg"
 
 
 const navItems = [
