@@ -15,60 +15,60 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({ ...prev, [name]: value }));
-  // };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault(); // Prevent default form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form submission
 
-  //   // Basic validation check (optional but recommended)
-  //   if (!formData.name || !formData.email  || !formData.message) {
-  //       toast({
-  //           title: "Error",
-  //           description: "Please fill out all fields.",
-  //           variant: "destructive",
-  //       });
-  //       return; // Stop submission if fields are missing
-  //   }
+    // Basic validation check (optional but recommended)
+    if (!formData.name || !formData.email  || !formData.message) {
+        toast({
+            title: "Error",
+            description: "Please fill out all fields.",
+            variant: "destructive",
+        });
+        return; // Stop submission if fields are missing
+    }
 
-  //   setIsSubmitting(true); // Indicate processing
+    setIsSubmitting(true); // Indicate processing
 
-  //   // --- WhatsApp Link Logic ---
-  //   // 1. **REPLACE THIS** with your WhatsApp phone number (include country code, no '+', no spaces, no leading zeros if country code is present)
-  //   const yourPhoneNumber = "9510332132"; // Example: 919510398098 for India, 15551234567 for US
+    // --- WhatsApp Link Logic ---
+    // 1. **REPLACE THIS** with your WhatsApp phone number (include country code, no '+', no spaces, no leading zeros if country code is present)
+    const yourPhoneNumber = "9510332132"; // Example: 919510398098 for India, 15551234567 for US
 
-  //   // 2. Construct the message using the form data
-  //   const messageBody = `Hello, I'm contacting you from your website.\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n\n*Message:*\n${formData.message}`;
+    // 2. Construct the message using the form data
+    const messageBody = `Hello, I'm contacting you from your website.\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n\n*Message:*\n${formData.message}`;
 
-  //   // 3. URL-encode the message for the WhatsApp link
-  //   const encodedMessage = encodeURIComponent(messageBody);
+    // 3. URL-encode the message for the WhatsApp link
+    const encodedMessage = encodeURIComponent(messageBody);
 
-  //   // 4. Create the full WhatsApp link
-  //   const whatsappLink = `https://wa.me/${yourPhoneNumber}?text=${encodedMessage}`;
+    // 4. Create the full WhatsApp link
+    const whatsappLink = `https://wa.me/${yourPhoneNumber}?text=${encodedMessage}`;
 
-  //   // 5. Open the link in a new tab/window
-  //   window.open(whatsappLink, '_blank', 'noopener,noreferrer');
-  //   // --- End WhatsApp Link Logic ---
+    // 5. Open the link in a new tab/window
+    window.open(whatsappLink, '_blank', 'noopener,noreferrer');
+    // --- End WhatsApp Link Logic ---
 
 
-  //   // Give feedback to the user
-  //   toast({
-  //     title: "Opening WhatsApp...",
-  //     description: "Please confirm and send the message in WhatsApp.",
-  //   });
+    // Give feedback to the user
+    toast({
+      title: "Opening WhatsApp...",
+      description: "Please confirm and send the message in WhatsApp.",
+    });
 
-  //   // Reset the form fields after attempting to open WhatsApp
-  //   setFormData({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   });
+    // Reset the form fields after attempting to open WhatsApp
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
 
-  //   setIsSubmitting(false); // Re-enable the button
-  // };
+    setIsSubmitting(false); // Re-enable the button
+  };
 
   return (
     <section id="contact" className="section-container">
@@ -113,7 +113,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* <div>
+        <div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -172,7 +172,7 @@ export default function Contact() {
               )}
             </Button>
           </form>
-        </div> */}
+        </div>
       </div>
     </section>
   );

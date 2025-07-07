@@ -31,7 +31,7 @@ export default function SocialLinks({ className = "" }) {
           key={link.label}
           variant="outline"
           size="icon"
-          className="rounded-full card-hover bg-gray-900  dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-900"
+          className="rounded-full card-hover border-gray-300 "
           asChild
         >
           <a
