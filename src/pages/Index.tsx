@@ -32,9 +32,9 @@ const Index = () => {
       {/* <div className="reveal">
         <Experience />
       </div> */}
-      {/* <div className="reveal">
+      <div className="reveal">
         <Projects />
-      </div> */}
+      </div>
       {/* <div className="reveal">
         <Achievements />
       </div> */}
