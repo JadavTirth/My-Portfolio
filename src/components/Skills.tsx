@@ -7,8 +7,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   const skillCategories =
   [
   {
