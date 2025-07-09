@@ -112,23 +112,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      
-      <div className="mt-12 text-center">
-        <p className="text-gray-600 mb-6">
-          Check out more of my projects on GitHub:
-        </p>
-        <Button asChild>
-          <a
-            href="https://github.com/Henil-chhipani"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2"
-          >
-            <Github size={18} />
-            <span>View All Projects</span>
-          </a>
-        </Button>
-      </div>
     </section>
   );
 }
