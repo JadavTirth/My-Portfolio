@@ -7,7 +7,11 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   
+<<<<<<< HEAD
   const skillCategories =
+=======
+  const skillCategories = 
+>>>>>>> 2bb81a9 (Update: portfolio site with contact form and about changes)
   [
   {
     category: "Cloud Platforms",

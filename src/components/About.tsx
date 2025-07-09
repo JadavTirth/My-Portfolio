@@ -54,7 +54,11 @@ export default function About() {
               7th semester. Keen on cloud infrastructure, CI/CD automation, and
               building scalable DevOps pipelines using tools like Docker,
               Ansible, and GitLab. Always eager to learn new technologies and
+<<<<<<< HEAD
               contribute to reliable, production-grade systems.{" "}
+=======
+              contribute to reliable, production-grade systems. .{" "}
+>>>>>>> 2bb81a9 (Update: portfolio site with contact form and about changes)
             </p>
           </div>
 

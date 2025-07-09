@@ -112,6 +112,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
+        
 
         <div>
           <form onSubmit={handleSubmit} className="space-y-4">
