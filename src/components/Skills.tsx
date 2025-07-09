@@ -10,12 +10,6 @@ export default function Skills() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   const skillCategories =
-=======
-  const skillCategories = 
->>>>>>> 2bb81a9 (Update: portfolio site with contact form and about changes)
-=======
-  const skillCategories = 
->>>>>>> 2bb81a9713375e49ad2586edceda75164e605407
   [
   {
     category: "Cloud Platforms",
