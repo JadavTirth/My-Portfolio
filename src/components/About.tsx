@@ -1,6 +1,7 @@
 import { Briefcase, GraduationCap, MapPin } from "lucide-react";
 import SocialLinks from "./SocialLinks";
 import imge from "../../assets/ps2.jpg";
+import imge from "../../assets/ps2.jpg";
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
             <div className="aspect-square rounded-full overflow-hidden mx-auto mb-6 border-4 border-primary/20 w-40 h-40 animate-float">
               {/* Placeholder for profile image - replace with your actual image */}
               <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-300 flex items-center justify-center text-xl font-bold text-primary dark:text-blue-300">
+                <img src={imge} />
                 <img src={imge} />
               </div>
             </div>
@@ -68,6 +70,7 @@ export default function About() {
             </h3>
             <div className="mb-0">
               <h4 className="font-semibold dark:text-white">
+                B.E. in Information Technology
                 B.E. in Information Technology
               </h4>
               <p className="text-gray-600 dark:text-gray-300">
