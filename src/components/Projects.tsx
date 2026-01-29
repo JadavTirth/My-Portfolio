@@ -1,7 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Docker } from "@react-symbols/icons"; // optional for docker icon
 
 export default function Projects() {
   const projects = [
@@ -10,7 +9,8 @@ export default function Projects() {
       description:
         "Deployed full-stack Notes application on AWS EC2 using Docker, MySQL, and Nginx with Docker Compose.",
       technologies: ["Docker", "Docker Compose", "MySQL", "Nginx", "AWS EC2"],
-      dockerhub: "https://hub.docker.com/repository/docker/YOUR_USERNAME/notes-app", // replace with your Docker Hub URL
+      dockerhub:
+        "https://hub.docker.com/repository/docker/YOUR_USERNAME/notes-app", // change this
     },
     {
       title: "Import-Export Website",
@@ -19,6 +19,15 @@ export default function Projects() {
       technologies: ["React", "Node.js", "HTML", "CSS", "JavaScript"],
       github: "https://github.com/JadavTirth/import-export",
       live: "http://www.argoimex.com",
+    },
+    {
+      title: "Full-Stack Enquiry Management System (MERN)",
+      description:
+        "MERN Stack Contact & Enquiry Management System. Full-stack CRUD application using React, Node.js, Express.js, and MongoDB.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "REST API"],
+      github: "https://github.com/YOUR_GITHUB/enquiry-management", // optional
+      live: "https://YOUR_LIVE_URL", // optional
+      // dockerhub: "https://hub.docker.com/repository/docker/YOUR_USERNAME/enquiry-system", // optional
     },
   ];
 
@@ -32,11 +41,11 @@ export default function Projects() {
             key={index}
             className="dark:bg-slate-900 rounded-lg shadow-md overflow-hidden card-hover"
           >
-            {/* Removed project image */}
             <div className="p-6">
               <h3 className="font-bold text-xl mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
 
+              {/* Technologies */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <Badge
@@ -49,7 +58,8 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-4">
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-4">
                 {project.dockerhub && (
                   <Button variant="outline" size="sm" asChild>
                     <a
@@ -58,8 +68,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      🐳
-                      <span>Docker Hub</span>
+                      🐳 <span>Docker Hub</span>
                     </a>
                   </Button>
                 )}
